@@ -50,11 +50,6 @@ public class EmployeeService {
                 .max(Comparator.comparingInt(employee -> employee.getSalary()))
                 .get();
     }
-
-
-    public String print() {
-        return employeeList.toString();
-    }
 }
 
 
