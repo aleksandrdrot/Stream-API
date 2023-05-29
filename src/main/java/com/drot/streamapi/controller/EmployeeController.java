@@ -1,5 +1,6 @@
-package com.drot.streamapi;
+package com.drot.streamapi.controller;
 
+import com.drot.streamapi.service.EmployeeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,7 +18,7 @@ public class EmployeeController {
 
     @GetMapping("add")
     public String addEmployee(@RequestParam("firstName") String firstName, @RequestParam("lastName") String lastName, @RequestParam("salary") int salary, @RequestParam("department") int department) {
-        return listService.addEmployee(firstName, lastName, salary, department);
+        return listService.addEmployee(firstName, lastName, salary, department) + "Добавлен!";
     }
 
     @GetMapping("remove")
